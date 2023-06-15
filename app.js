@@ -18,7 +18,10 @@ app.post('/login', (req, res) => {
   if (!email || !senha) {
     res.status(400)
   }
-  res.status(200).json({ success: true })
+  res.status(200).json({
+    success: true,
+    message: "Login"
+  })
 })
 
 app.listen(port);
